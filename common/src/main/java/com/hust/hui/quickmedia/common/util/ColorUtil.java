@@ -7,6 +7,17 @@ import java.awt.*;
  */
 public class ColorUtil {
 
+    /**
+     * 全透明颜色
+     */
+    public static Color OPACITY = ColorUtil.int2color(0x00FFFFFF);
+
+
+    /**
+     * 米黄色
+     */
+    public static Color OFF_WHITE = ColorUtil.int2color(0xFFF7EED6);
+
 
     /**
      * int格式的颜色转为 awt 的Color对象
@@ -20,5 +31,21 @@ public class ColorUtil {
         int g = (0x0000ff00 & color) >> 8;
         int b = (0x000000ff & color);
         return new Color(r, g, b, a);
+    }
+
+
+    /**
+     * 将Color对象转为html对应的颜色配置信息
+     *
+     * 如  Color.RED  ->  #f00
+     *
+     * @param color
+     * @return
+     */
+    public static String int2htmlColor(int color) {
+        int r = (0x00ff0000 & color) >> 16;
+        int g = (0x0000ff00 & color) >> 8;
+        int b = (0x000000ff & color);
+        return "#" + NumUtil.toHex(r) + NumUtil.toHex(g) + NumUtil.toHex(b);
     }
 }
