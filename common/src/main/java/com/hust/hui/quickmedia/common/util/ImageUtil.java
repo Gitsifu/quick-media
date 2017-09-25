@@ -201,18 +201,13 @@ public class ImageUtil {
         int qrCodeWidth = bitMatrix.getWidth();
         int qrCodeHeight = bitMatrix.getHeight();
         int infoSize = bitMatrix.getMultiple();
-        BufferedImage qrCode = new BufferedImage(qrCodeWidth, qrCodeHeight, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage qrCode = new BufferedImage(qrCodeWidth, qrCodeHeight, BufferedImage.TYPE_INT_RGB);
 
 
         // 绘制的背景色
         Color bgColor = qrCodeConfig.getDrawOptions().getBgColor();
         // 绘制前置色
         Color preColor = qrCodeConfig.getDrawOptions().getPreColor();
-
-        if (qrCodeConfig.getBgImgOptions() != null && qrCodeConfig.getBgImgOptions().getBgImgStyle() == QrCodeOptions.BgImgStyle.PENETRATE) {
-            // 透传，用背景图颜色进行绘制时
-            preColor = ColorUtil.OPACITY;
-        }
 
         // 探测图形外圈的颜色
         Color detectOutColor = qrCodeConfig.getDetectOptions().getOutColor();

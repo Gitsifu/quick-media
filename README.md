@@ -19,18 +19,16 @@
 ### 已支持服务
 
 #### 1. 音频转码
-   - [x] 音频不同格式的相互转码
+   - 音频不同格式的相互转码
 
 #### 2. 二维码生成 & 解析
-- [x] 二维码生成
-- [x] 个性二维码生成
-    - 支持logo
-    - 支持logo样式 （圆角logo， 边框）
-    - 支持二维码颜色设置
-    - 支持探测图形颜色设置
-    - 支持背景图
-    - 支持base64格式的二维码图片
-    - 支持二维码定制绘制信息样式
+   - 支持logo
+   - 支持logo样式 （圆角logo， 边框）
+   - 支持二维码颜色设置
+   - 支持探测图形颜色设置
+   - 支持背景图
+   - 支持base64格式的二维码图片
+   - 支持二维码定制绘制信息样式
      - 三角形
      - 矩形
      - 五边形 （五角星待支持）
@@ -38,37 +36,41 @@
      - 八边形
      - 圆
      - 自定义图片
-- [x] 二维码信息解析
+   - 支持二维码信息解析
 
-[查看更多二维码详情](doc/qrcode/QrGuide.md)
+**实例**
+
+ 基本的样式：前置色（宝蓝） + 三定位颜色（蓝色）+ logo + logo边框 + logo圆角 + 背景图 + 着色样式（三角形，矩形，五边形，六边形，八边形，圆形）
+  
+  ![styl1](doc/img/qrcode/styleQr1.png)
+  
+ 
+ 自定义图片：使用自定义的图片来代替传统的纯色 （建议jpg格式非透明的图片）
+  
+  ![styl2](doc/img/qrcode/styleQr2.png)
+  
+ 
+ 深度定制：二维码上的所有信息都可以进行自定义替换，如下
+ 
+  ![style3](doc/img/qrcode/小灰灰blog.png)
 
 
+---
 
-#### 3. 图片
+### 待完成服务
 
-- [x] 长图文生成
-   - [水平文字，上下布局长图文生成](doc/images/imgGenV1.md)
-   - [垂直文字，左右布局长图文生成](doc/images/imgGenV2.md)
-   - 第三方字体支持
-- [x] markdown 转 image
-    - [markdown 转 html](doc/md/md2html.md)
-    - [html 转 image](doc/md/html2image.md)
-- [ ] 裁剪
-- [ ] 压缩
-- [ ] 旋转
-- [ ] 合成
-- [ ] 水印
-- [ ] 缩放
-- [ ] 格式转换
-
-[查看更多图片服务详情](doc/images/ImgGuide.md)
+1. 图片相关
+    - 长图文
+    - 裁剪
+    - 压缩
+    - 旋转
+    - 合成
+    - 水印
+    - 缩放
+    - 格式转换
+    - xxx
     
-#### 4. 视频相关
-- [ ] 视频压缩
-- [ ] 转码
-- [ ] 截取
-- [ ] 码率调整
-- [ ] 生成gif
+2. 视频相关
 
 
 ### tag 记录
@@ -82,28 +84,10 @@
 
     - 重写zxing的二维码渲染逻辑，只使用二维码矩阵的生成逻辑，支持二维码的全面定制化
 
-3. [v0.003](https://github.com/liuyueyi/quick-media/releases/tag/v0.003)
-
-    - 长图文生成的支持
-
-4. [v0.004](https://github.com/liuyueyi/quick-media/releases/tag/v0.004)
-   
-   - markdown 语法文本转html， 转image
 
 ### 文档
 
 - [音频转码服务说明](doc/audio.md)
-- [二维码生成解析服务说明](doc/qrcode/QrGenV1.md)
-- [二维码服务拓展说明](doc/qrcode/QrGenV2.md)
-- [二维码生成深度定制](doc/qrcode/QrGenV3.md)
-- [长图文生成支持](doc/images/imgGenV1.md)
-- [竖排长图文生成支持](doc/images/imgGenV2.md)
-- [markdown 转 html](doc/md/md2html.md)
-- [html 转 image](doc/md/html2image.md)
-
-
-### 其他
-
-关注小灰灰blog，获取更多信息
-
-![https://static.oschina.net/uploads/img/201709/05212311_hPmi.png](https://static.oschina.net/uploads/img/201709/05212311_hPmi.png)
+- [二维码生成解析服务说明](doc/qrcode.md)
+- [二维码服务拓展说明](doc/qrcodeExtend.md)
+- [二维码生成深度定制](doc/qrcodeSelfDesign.md)

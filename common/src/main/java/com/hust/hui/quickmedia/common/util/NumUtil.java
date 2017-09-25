@@ -23,14 +23,4 @@ public class NumUtil {
             return defaultValue;
         }
     }
-
-
-    public static String toHex(int hex) {
-        String str = Integer.toHexString(hex);
-        if (str.length() == 1) {
-            return "0" + str;
-        }
-
-        return str;
-    }
 }
